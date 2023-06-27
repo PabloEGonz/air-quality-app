@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getData } from '../redux/airqaSlice';
+import Container from '../components/cardContainer';
 
 const Home = () => {
-  const { airdata } = useSelector((state) => state.airqa.airdata);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
   }, []);
-  console.log(airdata);
   return (
-    <div>Home</div>
+    <div>
+      <Container />
+    </div>
   );
 };
 
