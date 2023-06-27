@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 const Card = ({ data }) => {
   console.log(data);
   return (
-    <li>{data.country}</li>
+    <li>
+      <h5>{data.state}</h5>
+      <p>{`The air quality is: ${data.aqi}`}</p>
+      <p>{data.country}</p>
+    </li>
   );
 };
 
