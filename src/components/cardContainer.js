@@ -8,7 +8,7 @@ const Container = () => {
   return (
     <ul>
       {airdata.map((ele) => (
-        <Card data={ele} />
+        <Card key={ele.lat} data={ele} />
       ))}
     </ul>
   );

@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 const Card = ({ data }) => {
   console.log(data);
   return (
-    <li key={data.lat}>{data.country}</li>
+    <li>{data.country}</li>
   );
 };
 
-Card.prototype = {
+Card.propTypes = {
   data: PropTypes.shape({
     aqi: PropTypes.number.isRequired,
     country: PropTypes.string.isRequired,
     lat: PropTypes.number.isRequired,
     lon: PropTypes.number.isRequired,
     state: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 export default Card;
