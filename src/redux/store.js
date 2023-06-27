@@ -1,8 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import airqaReducer from "./airqaSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import airqaReducer from './airqaSlice';
+
 const store = configureStore({
-    reducer: {
-        airqa: airqaReducer,
-    },
+  reducer: {
+    airqa: airqaReducer,
+  },
 });
 export default store;
