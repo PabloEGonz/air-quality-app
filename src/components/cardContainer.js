@@ -6,7 +6,7 @@ const Container = () => {
   const { airdata } = useSelector((state) => state.airqa);
 
   return (
-    <ul>
+    <ul className="card-container">
       {airdata.map((ele) => (
         <Card key={ele.lat} data={ele} />
       ))}
