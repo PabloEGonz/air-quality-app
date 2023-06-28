@@ -5,24 +5,24 @@ import Map from './map';
 const CardDetails = ({ data }) => (
   <li className="details row">
     <Map className="" lati={data.lat} lon={data.lon} />
-    <div className="details-body">
+    <div className="details-body d-flex flex-column">
       <h5 className="">{`${data.name},  ${data.state}, ${data.country}`}</h5>
       <p className="">{`The air quality is: ${data.aqi}`}</p>
       <span>
-        Carbon Monoxide
-        {`${data.comp.co}`}
+        Carbon Monoxide:
+        {` ${data.comp.co}`}
       </span>
       <span>
-        Nitrogen Monoxidee
-        {`${data.comp.no}`}
+        Nitrogen Monoxidee:
+        {` ${data.comp.no}`}
       </span>
       <span>
-        Nitrogen Dioxide
-        {`${data.comp.no2}`}
+        Nitrogen Dioxide:
+        {` ${data.comp.no2}`}
       </span>
       <span>
-        Ozone
-        {`${data.comp.o3}`}
+        Ozone:
+        {` ${data.comp.o3}`}
       </span>
     </div>
   </li>
@@ -36,7 +36,12 @@ CardDetails.propTypes = {
     lon: PropTypes.number.isRequired,
     state: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    comp: PropTypes.object.isRequired,
+    comp: PropTypes.shape({
+      co: PropTypes.number.isRequired,
+      no: PropTypes.number.isRequired,
+      no2: PropTypes.number.isRequired,
+      o3: PropTypes.number.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 export default CardDetails;

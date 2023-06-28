@@ -9,6 +9,17 @@ ul {
   height: 100vh;
 }
 
+.options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.option {
+  width: 30%;
+  height: 10%;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
