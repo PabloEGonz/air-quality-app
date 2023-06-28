@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../redux/airqaSlice';
 import Container from '../components/cardContainer';
+import Filtered from '../components/filtered';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Home = () => {
   }, [dispatch, cities]);
   return (
     <div>
+      <Filtered />
       <Container />
     </div>
   );

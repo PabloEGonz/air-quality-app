@@ -42,9 +42,11 @@ export const getData = createAsyncThunk('airqa/getData', async (array) => {
       const resp = await axios(url);
       const res = resp.data;
       const info = res.list[0].main;
+      const comp = res.list[0].components;
       const send = {
         ...ele,
         ...info,
+        comp,
       };
       return send;
     } catch (error) {
