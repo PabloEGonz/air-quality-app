@@ -9,7 +9,7 @@ const Map = ({ lati, lon }) => {
   const map = useRef(null);
   const [lng] = useState(lon);
   const [lat] = useState(lati);
-  const [zoom] = useState(6);
+  const [zoom] = useState(7);
   const [API_KEY] = useState('hHGuceOvDE9b4YEn0rQq');
 
   useEffect(() => {
