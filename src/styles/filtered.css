@@ -1,0 +1,21 @@
+.filtered {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#form-filter {
+  width: 90%;
+  height: 40px;
+  text-indent: 5px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+#form-filter option {
+  width: 40%;
+}
+
+form button {
+  width: 30%;
+  font-size: 1.1rem;
+}

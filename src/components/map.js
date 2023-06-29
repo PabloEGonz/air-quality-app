@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import PropTypes from 'prop-types';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import './map.css';
+import '../styles/map.css';
 
 const Map = ({ lati, lon }) => {
   const mapContainer = useRef(null);

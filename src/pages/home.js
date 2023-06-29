@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { getData } from '../redux/airqaSlice';
-import Container from '../components/cardContainer';
 import Filtered from '../components/filtered';
 
 const Home = () => {
@@ -25,7 +24,6 @@ const Home = () => {
       </nav>
       <div>
         <Filtered />
-        <Container />
       </div>
     </>
   );

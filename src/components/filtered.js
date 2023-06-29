@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/filtered.css';
 import { useSelector } from 'react-redux';
 import Card from './card';
 
@@ -14,10 +15,11 @@ const Filtered = () => {
     if (categ === 'best') {
       const newArray = airdata.filter((ele) => ele.aqi <= 2);
       setFilt(newArray);
-    }
-    if (categ === 'worst') {
+    } else if (categ === 'worst') {
       const newArray = airdata.filter((ele) => ele.aqi >= 3);
       setFilt(newArray);
+    } else if (categ === 'all') {
+      setFilt(airdata);
     }
   };
 
@@ -29,6 +31,7 @@ const Filtered = () => {
             <option value="">--Please choose an option--</option>
             <option value="worst">Worst</option>
             <option value="best">Best</option>
+            <option value="all">All</option>
           </select>
           <button type="button" onClick={filterArray}>Filter</button>
         </form>
