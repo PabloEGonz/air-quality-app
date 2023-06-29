@@ -1,0 +1,31 @@
+.quality {
+  font-weight: 700;
+  padding: 2%;
+}
+
+.good {
+  color: #067a1f;
+}
+
+.fair {
+  color: #4bba06;
+}
+
+.moderate {
+  color: #f9f108;
+}
+
+.poor {
+  color: #f0a504;
+}
+
+.vpoor {
+  color: #f90808;
+}
+
+@media only screen and (min-width: 768px) {
+  .quality {
+    font-weight: 700;
+    padding: 0;
+  }
+}

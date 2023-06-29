@@ -1,0 +1,33 @@
+.card .map-wrap {
+  position: relative;
+  width: 47vw;
+  height: 250px;
+}
+
+.card .map {
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.maplibregl-ctrl-attrib.maplibregl-compact-show {
+  display: none;
+}
+
+.details .map-wrap {
+  box-sizing: border-box !important;
+  position: relative;
+  width: 50%;
+  height: 210px;
+  margin-right: 0 !important;
+}
+
+.details .map {
+  width: 100%;
+  height: 100%;
+}
+
+.details-body {
+  width: 50%;
+}
