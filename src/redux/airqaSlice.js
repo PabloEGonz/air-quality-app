@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { APIURL } from '../api/url';
 
 const citiesData = [{
@@ -57,8 +56,11 @@ export const getData = createAsyncThunk('airqa/getData', async (array) => {
   const promises = array.map(async (ele) => {
     const url = APIURL(ele.lat, ele.lon);
     try {
-      const resp = await axios(url);
-      const res = resp.data;
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const res = await response.json();
       const info = res.list[0].main;
       const comp = res.list[0].components;
       const send = {
