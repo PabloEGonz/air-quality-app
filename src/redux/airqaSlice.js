@@ -46,7 +46,7 @@ const citiesData = [{
 },
 ];
 const initialState = {
-  airdata: JSON.parse(localStorage.getItem('airdataAPI')) || [],
+  airdata: [],
   cities: citiesData,
   isLoading: false,
   error: undefined,
@@ -87,7 +87,6 @@ const airqaSlice = createSlice({
       .addCase(getData.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.airdata = payload;
-        localStorage.setItem('airdataAPI', JSON.stringify(state.airdata));
       })
       .addCase(getData.rejected, (state) => {
         state.error = true;
