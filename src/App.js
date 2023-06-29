@@ -7,13 +7,19 @@ import {
 import Navbar from './pages/navbar';
 import Home from './pages/home';
 import Details from './pages/details';
+import Options from './pages/options';
+import Add from './pages/add';
+import About from './pages/about';
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
+        <Route index element={<Options />} />
         <Route path="/home" element={<Home />} />
         <Route path="/details" element={<Details />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/about" element={<About />} />
       </Route>,
     ),
   );
