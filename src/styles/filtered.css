@@ -20,11 +20,13 @@ form button {
   .filtered {
     margin-top: 5%;
   }
+
   #form-filter {
     width: 30%;
     font-size: 1.1rem;
     text-align: center;
   }
+
   form button {
     width: 10%;
     font-size: 1.2rem;

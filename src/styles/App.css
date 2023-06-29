@@ -82,7 +82,6 @@ ul {
 
 .card {
   width: fit-content;
-  height: fit-content;
   justify-self: center;
 }
 
@@ -135,15 +134,18 @@ ul {
   .navbar-index {
     padding: 2% 4%;
   }
+
   .brand {
     font-size: 1.5rem;
     font-weight: 700;
   }
+
   .options {
     margin-top: 5%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
+
   .card-container {
     margin-top: 0;
     display: grid;
