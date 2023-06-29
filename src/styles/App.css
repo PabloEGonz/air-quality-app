@@ -118,6 +118,14 @@ ul {
   margin-top: 2%;
 }
 
+.about {
+  text-align: center;
+  width: 95%;
+  overflow: scroll;
+  margin: auto;
+  margin-top: 5%;
+}
+
 .under-dev {
   color: #fff;
   text-align: center;
@@ -154,4 +162,3 @@ ul {
     margin-top: 1%;
   }
 }
-

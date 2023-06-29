@@ -38,6 +38,12 @@ const citiesData = [{
   lon: 116.3912757,
   country: 'CN',
   state: 'Beijing',
+}, {
+  name: 'Lahore',
+  lat: 31.5656822,
+  lon: 74.3141829,
+  country: 'PK',
+  state: 'Punjab',
 },
 ];
 const initialState = {
