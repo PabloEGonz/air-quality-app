@@ -8,17 +8,27 @@ import { RiAccountCircleFill } from 'react-icons/ri';
 
 const Options = () => (
   <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <Link className="return" to="/"><RiAccountCircleFill className="option" /></Link>
-        <h3 className="navbar-brand">Air Quality App</h3>
-      </div>
+    <nav className="navbar-index">
+      <Link to="/"><RiAccountCircleFill className="account" /></Link>
+      <h3 className="navbar-brand">Air Quality App</h3>
     </nav>
     <div className="options">
-      <Link className="link" to="/home"><FaMapMarked className="option" /></Link>
-      <Link className="link" to="/details"><TbListDetails className="option" /></Link>
-      <Link className="link" to="/add"><MdLibraryAdd className="option" /></Link>
-      <Link className="link" to="/about"><BsPatchQuestionFill className="option" /></Link>
+      <Link className="link" to="/home">
+        <FaMapMarked className="option" />
+        Cites Air Quality
+      </Link>
+      <Link className="link" to="/details">
+        <TbListDetails className="option" />
+        Details
+      </Link>
+      <Link className="link" to="/add">
+        <MdLibraryAdd className="option" />
+        Add a City
+      </Link>
+      <Link className="link" to="/about">
+        <BsPatchQuestionFill className="option" />
+        About
+      </Link>
     </div>
   </>
 );

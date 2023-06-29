@@ -11,7 +11,6 @@ const Map = ({ lati, lon }) => {
   const [lat] = useState(lati);
   const [zoom] = useState(7);
   const [API_KEY] = useState('hHGuceOvDE9b4YEn0rQq');
-
   useEffect(() => {
     if (map.current) return; // stops map from intializing more than once
 

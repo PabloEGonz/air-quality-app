@@ -13,7 +13,7 @@ const Home = () => {
     if (airdata.length === 0) {
       dispatch(getData(cities));
     }
-  }, [dispatch, cities]);
+  }, [dispatch, cities, airdata.length]);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">

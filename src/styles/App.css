@@ -1,5 +1,11 @@
+.root {
+  --white: #fff;
+  --black: black;
+  --pink: #f95091;
+}
+
 ul {
-  padding: 0 !important;
+  padding: 0;
   margin: 0;
   list-style: none;
 }
@@ -8,6 +14,26 @@ ul {
   width: 100%;
   height: 100%;
   background-color: black;
+}
+
+.navbar-index {
+  background-color: #f95091;
+  height: 30%;
+  padding: 2%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+}
+
+.nav-brand {
+  font-size: 1.2rem;
 }
 
 .return {
@@ -29,7 +55,14 @@ ul {
   height: 100%;
   justify-self: center;
   align-self: center;
-  color: #f95091;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .option {
@@ -38,17 +71,17 @@ ul {
 }
 
 .card-container {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   width: 100%;
+  padding: 2%;
 }
 
 .card {
-  margin-top: 2%;
   width: fit-content;
   height: fit-content;
-  border-radius: 10px;
   justify-self: center;
 }
 
@@ -61,6 +94,7 @@ ul {
 }
 
 .card-container-details {
+  padding: 0;
   width: 100% !important;
 }
 
@@ -69,7 +103,12 @@ ul {
 }
 
 .details-body {
-  color: black !important;
+  color: rgb(251, 243, 243) !important;
+}
+
+.details-body p,
+.details-body span {
+  font-size: 0.8rem;
 }
 
 .under-dev {

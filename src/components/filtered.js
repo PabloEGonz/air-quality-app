@@ -28,11 +28,12 @@ const Filtered = () => {
       <div className="filtered">
         <form action="POST">
           <select name="filter" id="form-filter" onChange={handleCatChng}>
-            <option value="">--Please choose an option--</option>
+            <option value="">-Please choose an option-</option>
             <option value="worst">Worst</option>
             <option value="best">Best</option>
             <option value="all">All</option>
           </select>
+          <br />
           <button type="button" onClick={filterArray}>Filter</button>
         </form>
       </div>
