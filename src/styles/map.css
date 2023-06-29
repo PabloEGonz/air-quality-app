@@ -7,8 +7,8 @@
 .card .map {
   position: absolute;
   width: 100%;
+  border-radius: 5px;
   height: 100%;
-  border-radius: 10px;
 }
 
 .maplibregl-ctrl-attrib.maplibregl-compact-show {
@@ -19,17 +19,15 @@
   box-sizing: border-box !important;
   position: relative;
   width: 50%;
-  height: 250px;
+  height: 210px;
   margin-right: 0 !important;
 }
 
 .details .map {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .details-body {
   width: 50%;
 }
-

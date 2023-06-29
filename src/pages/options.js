@@ -10,7 +10,7 @@ const Options = () => (
   <>
     <nav className="navbar-index">
       <Link to="/"><RiAccountCircleFill className="account" /></Link>
-      <h3 className="navbar-brand">Air Quality App</h3>
+      <h3 className="brand">Air Quality App</h3>
     </nav>
     <div className="options">
       <Link className="link" to="/home">

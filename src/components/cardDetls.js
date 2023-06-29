@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Map from './map';
+import Quality from './quality';
 
 const CardDetails = ({ data }) => (
   <li className="details row">
     <Map className="" lati={data.lat} lon={data.lon} />
     <div className="details-body d-flex flex-column">
       <h5 className="">{`${data.name},  ${data.state}, ${data.country}`}</h5>
-      <p className="">{`The air quality is: ${data.aqi}`}</p>
+      <Quality className="card-text card-footer" number={data.aqi} />
       <span>
         Carbon Monoxide:
         {` ${data.comp.co}`}

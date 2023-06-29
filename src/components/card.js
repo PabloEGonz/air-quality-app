@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Map from './map';
+import Quality from './quality';
 
 const Card = ({ data }) => (
   <li className="card">
@@ -8,7 +9,7 @@ const Card = ({ data }) => (
     <div className="card-img-overlay">
       <h5 className="card-title">{`${data.name},  ${data.state}, ${data.country}`}</h5>
     </div>
-    <p className="card-text card-footer">{`The air quality is: ${data.aqi}`}</p>
+    <Quality className="card-text card-footer" number={data.aqi} />
   </li>
 );
 
