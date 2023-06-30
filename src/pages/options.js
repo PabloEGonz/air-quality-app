@@ -24,7 +24,7 @@ const Options = () => {
       <div className="options">
         <Link className="link" to="/home">
           <FaMapMarked className="option" />
-          Cites Air Quality
+          Cities Air Quality
         </Link>
         <Link className="link" to="/details">
           <TbListDetails className="option" />
