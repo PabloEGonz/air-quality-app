@@ -1,43 +1,33 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { FaMapMarked } from 'react-icons/fa';
 import { MdLibraryAdd } from 'react-icons/md';
 import { TbListDetails } from 'react-icons/tb';
 import { BsPatchQuestionFill } from 'react-icons/bs';
 import { RiAccountCircleFill } from 'react-icons/ri';
-import { getData } from '../redux/airqaSlice';
 
 const Options = () => {
-  const dispatch = useDispatch();
-  const { cities } = useSelector((state) => state.airqa);
-
-  useEffect(() => {
-    dispatch(getData(cities));
-  }, [dispatch, cities]);
   return (
     <>
       <nav className="navbar-index">
-        <Link to="/"><RiAccountCircleFill className="account" /></Link>
+        <a to="/"><RiAccountCircleFill className="account" /></a>
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <div className="options">
-        <Link className="link" to="/home">
+        <a className="a" to="/home">
           <FaMapMarked className="option" />
           Cities Air Quality
-        </Link>
-        <Link className="link" to="/details">
+        </a>
+        <a className="a" to="/details">
           <TbListDetails className="option" />
           Details
-        </Link>
-        <Link className="link" to="/add">
+        </a>
+        <a className="a" to="/add">
           <MdLibraryAdd className="option" />
           Add a City
-        </Link>
-        <Link className="link" to="/about">
+        </a>
+        <a className="a" to="/about">
           <BsPatchQuestionFill className="option" />
           About
-        </Link>
+        </a>
       </div>
     </>
   );
