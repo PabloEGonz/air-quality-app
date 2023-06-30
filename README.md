@@ -29,9 +29,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Air Quality App <a name="about-project"></a>
 
-This a webapp that display the air quality of cities.
+This a webapp that display the air quality of cities and their respective map.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -99,6 +99,16 @@ Run this command:
 ```sh
     cd my-project
     npm install
+````
+### Test
+
+Install this project with:
+
+Run this command:
+
+```sh
+    cd my-project
+    npm test
 ````
 
 ### Usage
