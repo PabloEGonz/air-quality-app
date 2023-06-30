@@ -100,16 +100,16 @@ Run this command:
     cd my-project
     npm install
 ````
-### Test
 
-Install this project with:
+```sh
+### Test
 
 Run this command:
 
 ```sh
     cd my-project
     npm test
-````
+```
 
 ### Usage
 
