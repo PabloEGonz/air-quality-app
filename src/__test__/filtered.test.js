@@ -1,9 +1,8 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Filtered from "./__mocks__/filtered";
+import Filtered from './__mocks__/filtered';
 
 describe('it renders correctly', () => {
-
   test('it renders About link correctly', () => {
     render(<Filtered />);
     expect(screen.getByText(/Filter/)).toBeInTheDocument();
@@ -12,4 +11,4 @@ describe('it renders correctly', () => {
     const component = Filtered;
     expect(component).toMatchSnapshot();
   });
-})
+});

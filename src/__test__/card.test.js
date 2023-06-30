@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react"
-import Card from "./__mocks__/card";
+import { render, screen } from '@testing-library/react';
+import Card from './__mocks__/card';
 import '@testing-library/jest-dom';
-import React from "react";
 
 describe('it renders correctly', () => {
   const obj = {
@@ -25,5 +24,3 @@ describe('it renders correctly', () => {
     expect(component).toMatchSnapshot();
   });
 });
-
-

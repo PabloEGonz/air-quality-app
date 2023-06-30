@@ -1,6 +1,6 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Quality from "../components/quality";
+import Quality from '../components/quality';
 
 describe('it renders correctly', () => {
   test('Check if returns the right message', () => {

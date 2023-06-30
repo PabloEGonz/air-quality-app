@@ -1,9 +1,8 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Details from "./__mocks__/details";
+import Details from './__mocks__/details';
 
 describe('it renders correctly', () => {
-
   test('it renders About link correctly', () => {
     render(<Details />);
     expect(screen.getByText(/Air/)).toBeInTheDocument();
@@ -12,4 +11,4 @@ describe('it renders correctly', () => {
     const component = Details;
     expect(component).toMatchSnapshot();
   });
-})
+});

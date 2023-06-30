@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react"
-import About from "./__mocks__/about";
+import { render, screen } from '@testing-library/react';
+import About from './__mocks__/about';
 import '@testing-library/jest-dom';
-import React from "react";
 
 test('it renders correctly', () => {
   render(<About />);

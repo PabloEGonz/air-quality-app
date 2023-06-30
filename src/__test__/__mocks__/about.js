@@ -1,4 +1,3 @@
-
 const About = () => (
   <div>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">

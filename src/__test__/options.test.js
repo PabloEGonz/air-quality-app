@@ -1,9 +1,8 @@
-import { render, screen } from "@testing-library/react"
-import Options from "./__mocks__/options";
+import { render, screen } from '@testing-library/react';
+import Options from './__mocks__/options';
 import '@testing-library/jest-dom';
 
 describe('it renders correctly', () => {
-
   test('it renders About link correctly', () => {
     render(<Options />);
     expect(screen.getByText(/About/)).toBeInTheDocument();
