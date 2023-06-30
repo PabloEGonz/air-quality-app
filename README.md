@@ -101,21 +101,17 @@ Run this command:
     npm install
 ````
 
-```sh
-### Test
-
-Run this command:
-
-```sh
-    cd my-project
-    npm test
-```
-
 ### Usage
 
 To run the project, execute the following command:
 
 npm start
+
+### Test
+
+Run this command:
+
+npm test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
