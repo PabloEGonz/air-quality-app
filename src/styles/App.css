@@ -87,7 +87,8 @@ ul {
 }
 
 .card-title {
-  color: #fff !important;
+  color: #070707 !important;
+  font-weight: 600;
 }
 
 .card-text {
@@ -164,6 +165,7 @@ ul {
   .details-body span {
     margin-top: 1%;
   }
+
   .about {
     overflow: hidden;
   }
