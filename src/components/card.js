@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import Map from './map';
 import Quality from './quality';
 
-const Card = ({ data }) => (
-  <li className="card">
-    <Map className="card-img" lati={data.lat} lon={data.lon} />
-    <div className="card-img-overlay">
-      <h5 className="card-title">{`${data.name},  ${data.state}, ${data.country}`}</h5>
-    </div>
-    <Quality className="card-text card-footer" number={data.aqi} />
-  </li>
-);
+const Card = ({ data }) => {
+  const navigate = useNavigate();
+  return (
+    <li className="card">
+      <Map className="card-img" lati={data.lat} lon={data.lon} />
+      <div className="card-img-overlay">
+        <button type="button" className="trigger" onClick={() => navigate(`/details/${data.name}`, { replace: true })}><h5 className="card-title">{`${data.name},  ${data.state}, ${data.country}`}</h5></button>
+      </div>
+      <Quality className="card-text card-footer" number={data.aqi} />
+    </li>
+  );
+};
 
 Card.propTypes = {
   data: PropTypes.shape({

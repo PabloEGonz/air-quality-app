@@ -86,6 +86,11 @@ ul {
   justify-self: center;
 }
 
+.trigger {
+  background-color: rgba(247, 244, 244, 0.008);
+  border: none;
+}
+
 .card-title {
   color: #070707 !important;
   font-weight: 600;
