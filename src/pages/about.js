@@ -62,7 +62,6 @@ const About = () => (
             <td>[100; 140)</td>
             <td>[9400; 12400)</td>
           </tr>
-          {' '}
           <tr>
             <th scope="row">Poor</th>
             <td>4</td>
@@ -73,7 +72,6 @@ const About = () => (
             <td>[140; 180)</td>
             <td>[12400; 15400)</td>
           </tr>
-          {' '}
           <tr>
             <th scope="row">Very Poor</th>
             <td>5</td>
