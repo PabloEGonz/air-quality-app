@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { APIURL } from '../api/url';
+import { APIURL, getCoord } from '../api/url';
 
 const citiesData = [{
   name: 'Paris',
@@ -47,6 +47,7 @@ const citiesData = [{
 ];
 const initialState = {
   airdata: [],
+  cityOptions: [],
   cities: citiesData,
   isLoading: false,
   error: undefined,
@@ -76,6 +77,18 @@ export const getData = createAsyncThunk('airqa/getData', async (array) => {
   return Promise.all(promises);
 });
 
+export const getCityCoord = createAsyncThunk('airqa/getCityCoord', async (city) => {
+  try {
+    const response = await getCoord(city);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const res = await response.json();
+  } catch (error) {
+    return error;
+  }
+})
+
 const airqaSlice = createSlice({
   name: 'airqa',
   initialState,
@@ -89,6 +102,16 @@ const airqaSlice = createSlice({
         state.airdata = payload;
       })
       .addCase(getData.rejected, (state) => {
+        state.error = true;
+      })
+      .addCase(getCityCoord.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getCityCoord.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.cityOptions = payload;
+      })
+      .addCase(getCityCoord.rejected, (state) => {
         state.error = true;
       });
   },
