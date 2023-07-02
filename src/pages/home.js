@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { BsPatchQuestionFill } from 'react-icons/bs';
+import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import Filtered from '../components/filtered';
 import { getData } from '../redux/airqaSlice';
 
@@ -15,8 +15,8 @@ const Home = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
+          <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
           <h3 className="navbar-brand">Air Quality App</h3>
-          <Link className="return" to="/about"><BsPatchQuestionFill className="option" /></Link>
         </div>
       </nav>
       <div>

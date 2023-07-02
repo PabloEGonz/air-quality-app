@@ -13,7 +13,7 @@ const Options = () => (
       <h3 className="brand">Air Quality App</h3>
     </nav>
     <div className="options">
-      <Link className="link" to="/home">
+      <Link className="link" to="/cities">
         <FaMapMarked className="option" />
         Cities Air Quality
       </Link>
