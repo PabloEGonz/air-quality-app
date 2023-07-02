@@ -1,13 +1,15 @@
+import '../styles/add.css';
 import React, { useState } from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCityCoord } from '../redux/airqaSlice';
+import Locations from '../components/locations';
 
 const Add = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
-  // const { cityOptions } = useSelector((state) => state.airqa);
+  const { cityOptions } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
     setCity(e.target.value);
   };
@@ -31,6 +33,17 @@ const Add = () => {
         </form>
         <h1 className="under-dev">Coming soon</h1>
       </div>
+      {
+        cityOptions.length > 0 && (
+          <div>
+            <ul>
+              {cityOptions.map((e) => (
+                <Locations key={e.lon} info={e} />
+              ))}
+            </ul>
+          </div>
+        )
+      }
     </>
   );
 };
