@@ -84,10 +84,12 @@ export const getCityCoord = createAsyncThunk('airqa/getCityCoord', async (city) 
       throw new Error('Network response was not ok');
     }
     const res = await response.json();
+    console.log(res);
+    return [];
   } catch (error) {
     return error;
   }
-})
+});
 
 const airqaSlice = createSlice({
   name: 'airqa',
