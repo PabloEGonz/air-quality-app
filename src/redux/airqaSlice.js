@@ -93,6 +93,12 @@ export const getCityCoord = createAsyncThunk('airqa/getCityCoord', async (city) 
 const airqaSlice = createSlice({
   name: 'airqa',
   initialState,
+  reducers: {
+    addCity: (state, { payload }) => {
+      state.cities.push(payload);
+      console.log(payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getData.pending, (state) => {
@@ -117,5 +123,5 @@ const airqaSlice = createSlice({
       });
   },
 });
-
+export const { addCity } = airqaSlice.actions;
 export default airqaSlice.reducer;

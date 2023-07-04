@@ -1,29 +1,43 @@
 import React from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addCity } from '../redux/airqaSlice';
 
-const Locations = ({ info }) => (
-  <li className="card">
-    <div className="card-body">
-      <h2>
-        {`${info.name},  ${info.state}, ${info.country}` }
-      </h2>
-      <ReactCountryFlag
-        className="flag"
-        countryCode={info.country}
-        svg
-        style={{
-          width: '3em',
-          height: '3em',
-        }}
-      />
-      <p>
-        <span>{info.lat}</span>
-        <span>{info.lon}</span>
-      </p>
-    </div>
-  </li>
-);
+const Locations = ({ info }) => {
+  const dispatch = useDispatch();
+  const handleSelect = () => {
+    dispatch(addCity(info));
+  };
+  return (
+    <li className="card">
+      <div className="card-body">
+        <h2>
+          {`${info.name},  ${info.state}, ${info.country}` }
+        </h2>
+        <ReactCountryFlag
+          className="flag"
+          countryCode={info.country}
+          svg
+          style={{
+            width: '3em',
+            height: '3em',
+          }}
+        />
+        <p>
+          <span>{info.lat}</span>
+          <span>{info.lon}</span>
+        </p>
+        <button
+          type="button"
+          onClick={handleSelect}
+        >
+          Select
+        </button>
+      </div>
+    </li>
+  );
+};
 Locations.propTypes = {
   info: PropTypes.shape({
     country: PropTypes.string.isRequired,

@@ -16,6 +16,7 @@ const Add = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(getCityCoord(city));
+    setCity('');
   };
   return (
     <>
@@ -31,7 +32,6 @@ const Add = () => {
           <input id="search-city" type="text" value={city} onChange={handleChange} />
           <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
-        <h1 className="under-dev">Coming soon</h1>
       </div>
       {
         cityOptions.length > 0 && (
