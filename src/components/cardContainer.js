@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { uuid } from 'uuidv4';
 import Card from './card';
 
 const Container = () => {
@@ -8,7 +9,7 @@ const Container = () => {
   return (
     <ul className="card-container">
       {airdata.map((ele) => (
-        <Card key={ele.lat} data={ele} />
+        <Card key={uuid()} data={ele} />
       ))}
     </ul>
   );

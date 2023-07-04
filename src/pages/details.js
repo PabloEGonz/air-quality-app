@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { Link, useParams } from 'react-router-dom';
+import { v4 as uuidV4 } from 'uuid';
 import CardDetails from '../components/cardDetls';
 
 const Details = () => {
@@ -18,7 +19,7 @@ const Details = () => {
       </nav>
       <ul className="card-container-details">
         {selected.map((ele) => (
-          <CardDetails key={ele.lon} data={ele} />
+          <CardDetails key={uuidV4()} data={ele} />
         ))}
       </ul>
     </>

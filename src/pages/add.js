@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { v4 as uuidV4 } from 'uuid';
 import { getCityCoord } from '../redux/airqaSlice';
 import Locations from '../components/locations';
 
@@ -38,7 +39,7 @@ const Add = () => {
           <div>
             <ul>
               {cityOptions.map((e) => (
-                <Locations key={e.lon} info={e} />
+                <Locations key={uuidV4()} info={e} />
               ))}
             </ul>
           </div>

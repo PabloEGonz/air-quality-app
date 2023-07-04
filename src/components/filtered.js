@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/filtered.css';
 import { useSelector } from 'react-redux';
+import { v4 as uuidV4 } from 'uuid';
 import Card from './card';
 
 const Filtered = () => {
@@ -39,7 +40,7 @@ const Filtered = () => {
       </div>
       <ul className="card-container">
         {filt.map((ele) => (
-          <Card key={ele.lat} data={ele} />
+          <Card key={uuidV4()} data={ele} />
         ))}
       </ul>
     </>
