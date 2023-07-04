@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   const navigate = useNavigate();
   return (
     <li className="card">
-      <Map className="card-img" lati={data.lat} lon={data.lon} />
+      <Map lati={data.lat} lon={data.lon} />
       <div className="card-img-overlay">
         <button type="button" className="trigger" onClick={() => navigate(`/details/${data.name}`, { replace: true })}><h5 className="card-title">{`${data.name},  ${data.state}, ${data.country}`}</h5></button>
       </div>
