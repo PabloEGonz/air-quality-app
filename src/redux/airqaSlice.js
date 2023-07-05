@@ -98,6 +98,9 @@ const airqaSlice = createSlice({
       state.cities.push(payload);
       console.log(payload);
     },
+    removeCity: (state, { payload }) => {
+      state.cities = state.cities.filter((city) => city.name !== payload);
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -123,5 +126,5 @@ const airqaSlice = createSlice({
       });
   },
 });
-export const { addCity } = airqaSlice.actions;
+export const { addCity, removeCity } = airqaSlice.actions;
 export default airqaSlice.reducer;
