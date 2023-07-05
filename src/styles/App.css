@@ -81,11 +81,10 @@ ul {
   padding: 2%;
 }
 
-.card {
-  margin: 4% 1% 0 1%;
+.card-map {
+  margin: 8% 1% 0 1%;
   width: fit-content;
   justify-self: center;
-  background-color: rgb(0, 255, 30);
 }
 
 .trigger {
@@ -108,7 +107,7 @@ ul {
 }
 
 .details {
-  margin-top: 2%;
+  margin-top: 10% !important;
   padding: 3%;
 }
 

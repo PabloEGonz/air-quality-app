@@ -15,7 +15,8 @@ form button {
   height: 45px;
 }
 
-.card {
+.card-loc {
+  margin-top: 5%;
   width: 90%;
   text-align: center;
 }
