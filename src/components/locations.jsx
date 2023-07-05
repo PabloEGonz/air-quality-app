@@ -2,15 +2,16 @@ import React from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { addCity } from '../redux/airqaSlice';
+import { addCity, removeCity } from '../redux/airqaSlice';
 
-const Locations = ({ info }) => {
+const Locations = ({ info, action }) => {
   const dispatch = useDispatch();
   const handleSelect = () => {
-    dispatch(addCity(info));
+    if (action === 'add') dispatch(addCity(info));
+    else dispatch(removeCity(info.name));
   };
   return (
-    <li className="card">
+    <li className="card card-loc">
       <div className="card-body">
         <h2>
           {`${info.name},  ${info.state}, ${info.country}` }
@@ -24,12 +25,21 @@ const Locations = ({ info }) => {
             height: '3em',
           }}
         />
-        <button
-          type="button"
-          onClick={handleSelect}
-        >
-          Select
-        </button>
+        {action === 'add' ? (
+          <button
+            type="button"
+            onClick={handleSelect}
+          >
+            Add
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={handleSelect}
+          >
+            Remove
+          </button>
+        )}
       </div>
     </li>
   );
@@ -40,6 +50,7 @@ Locations.propTypes = {
     state: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
+  action: PropTypes.string.isRequired,
 };
 
 export default Locations;
