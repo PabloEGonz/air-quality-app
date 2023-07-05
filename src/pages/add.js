@@ -29,8 +29,7 @@ const Add = () => {
       </nav>
       <div>
         <form action="POST">
-          <h2 className="under-dev">Search for a city name</h2>
-          <input id="search-city" type="text" value={city} onChange={handleChange} />
+          <input id="search-city" type="text" value={city} onChange={handleChange} placeholder="Type the city name" />
           <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
       </div>

@@ -24,10 +24,6 @@ const Locations = ({ info }) => {
             height: '3em',
           }}
         />
-        <p>
-          <span>{info.lat}</span>
-          <span>{info.lon}</span>
-        </p>
         <button
           type="button"
           onClick={handleSelect}
@@ -41,8 +37,6 @@ const Locations = ({ info }) => {
 Locations.propTypes = {
   info: PropTypes.shape({
     country: PropTypes.string.isRequired,
-    lat: PropTypes.number.isRequired,
-    lon: PropTypes.number.isRequired,
     state: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,

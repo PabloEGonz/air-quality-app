@@ -1,8 +1,30 @@
+form {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#search-city {
+  height: 45px;
+  width: 60%;
+  text-indent: 10px;
+  font-size: 1.2rem;
+}
+
+form button {
+  width: 20%;
+  height: 45px;
+}
+
 .card {
   width: 90%;
   text-align: center;
 }
 
 .flag {
-  margin: 1%;
+  margin-right: 10%;
+}
+
+.card-body button {
+  font-size: 1.1rem;
+  padding: 1% 6%;
 }
