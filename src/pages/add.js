@@ -38,7 +38,7 @@ const Add = () => {
           <div>
             <ul>
               {cityOptions.map((e) => (
-                <Locations key={uuidV4()} info={e} />
+                <Locations key={uuidV4()} info={e} action="add" />
               ))}
             </ul>
           </div>

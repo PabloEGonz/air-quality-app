@@ -17,7 +17,7 @@ const Options = () => (
         <FaMapMarked className="option" />
         Cities Air Quality
       </Link>
-      <Link className="link" to="/details">
+      <Link className="link" to="/remove">
         <TbListDetails className="option" />
         Details
       </Link>
