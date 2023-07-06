@@ -17,13 +17,13 @@ const Options = () => (
         <FaMapMarked className="option" />
         Cities Air Quality
       </Link>
-      <Link className="link" to="/remove">
-        <TbListDetails className="option" />
-        Details
-      </Link>
       <Link className="link" to="/add">
         <MdLibraryAdd className="option" />
         Add a City
+      </Link>
+      <Link className="link" to="/remove">
+        <TbListDetails className="option" />
+        Remove a City
       </Link>
       <Link className="link" to="/about">
         <BsPatchQuestionFill className="option" />
