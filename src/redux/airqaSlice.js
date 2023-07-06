@@ -51,6 +51,7 @@ const initialState = {
   cities: citiesData,
   isLoading: false,
   error: undefined,
+  citOptIsLoad: false,
 };
 
 export const getData = createAsyncThunk('airqa/getData', async (array) => {
@@ -115,10 +116,10 @@ const airqaSlice = createSlice({
         state.error = true;
       })
       .addCase(getCityCoord.pending, (state) => {
-        state.isLoading = true;
+        state.citOptIsLoad = true;
       })
       .addCase(getCityCoord.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
+        state.citOptIsLoad = false;
         state.cityOptions = payload;
       })
       .addCase(getCityCoord.rejected, (state) => {
