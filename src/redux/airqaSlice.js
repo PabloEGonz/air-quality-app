@@ -96,7 +96,7 @@ const airqaSlice = createSlice({
   reducers: {
     addCity: (state, { payload }) => {
       state.cities.push(payload);
-      console.log(payload);
+      state.cityOptions = [];
     },
     removeCity: (state, { payload }) => {
       state.cities = state.cities.filter((city) => city.name !== payload);
