@@ -47,7 +47,7 @@ const Locations = ({ info, action }) => {
 Locations.propTypes = {
   info: PropTypes.shape({
     country: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
+    state: PropTypes.string,
     name: PropTypes.string.isRequired,
   }).isRequired,
   action: PropTypes.string.isRequired,
