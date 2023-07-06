@@ -34,7 +34,6 @@ const Filtered = () => {
             <option value="best">Best</option>
             <option value="all">All</option>
           </select>
-          <br />
           <button type="button" onClick={filterArray}>Filter</button>
         </form>
       </div>
