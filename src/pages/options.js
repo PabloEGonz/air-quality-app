@@ -8,7 +8,7 @@ import { RiAccountCircleFill } from 'react-icons/ri';
 
 const Options = () => (
   <>
-    <nav className="navbar-index">
+    <nav className="navbar">
       <Link to="/"><RiAccountCircleFill className="account" /></Link>
       <h3 className="brand">Air Quality App</h3>
     </nav>

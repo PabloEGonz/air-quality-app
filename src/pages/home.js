@@ -13,11 +13,9 @@ const Home = () => {
   }, [dispatch, cities]);
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
-          <h3 className="navbar-brand">Air Quality App</h3>
-        </div>
+      <nav className="navbar">
+        <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
+        <h3 className="brand">Air Quality App</h3>
       </nav>
       <div>
         <Filtered />

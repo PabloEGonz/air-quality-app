@@ -1,7 +1,9 @@
-.root {
-  --white: #fff;
-  --black: black;
-  --pink: #f95091;
+:root {
+  --text: #f3ecf8;
+  --background: #050308;
+  --primary: #4c0c81;
+  --secondary: #221132;
+  --accent: #9c63ca;
 }
 
 ul {
@@ -13,14 +15,14 @@ ul {
 .App {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: var(--background);
   font-family: 'Lato', sans-serif !important;
 }
 
-.navbar-index {
-  background-color: #f95091;
+.navbar {
+  background-color: var(--primary);
   height: 30%;
-  padding: 2%;
+  padding: 3% 5% !important;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -33,14 +35,14 @@ ul {
   color: #fff;
 }
 
-.nav-brand {
+.brand {
   font-size: 1.2rem;
 }
 
 .return {
   width: 50px;
   height: 50px;
-  color: #f95091;
+  color: var(--text);
 }
 
 .options {
@@ -81,6 +83,10 @@ ul {
   padding: 2%;
 }
 
+.card-img-overlay {
+  padding-top: 0 !important;
+}
+
 .card-map {
   margin: 8% 1% 0 1%;
   width: fit-content;
@@ -88,12 +94,13 @@ ul {
 }
 
 .trigger {
+  background-color: var(--secondary);
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
+  color: var(--text);
 }
 
 .card-title {
-  color: #070707;
   font-weight: 600;
 }
 
@@ -141,8 +148,8 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-  .navbar-index {
-    padding: 2% 4%;
+  .navbar {
+    padding: 2% 4% !important;
   }
 
   .brand {

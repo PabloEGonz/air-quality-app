@@ -20,6 +20,7 @@ form button {
   margin-top: 5%;
   width: 90%;
   text-align: center;
+  background-color: #f9f9f9a0;
 }
 
 .flag {
@@ -27,7 +28,10 @@ form button {
 }
 
 .card-body button {
+  background-color: var(--secondary);
+  color: var(--text);
   font-size: 1.1rem;
+  border-radius: 5px;
   padding: 1% 6%;
 }
 
