@@ -113,6 +113,7 @@ ul {
 }
 
 .details-body {
+  text-align: center !important;
   padding: 2% !important;
   color: rgb(251, 243, 243) !important;
 }
