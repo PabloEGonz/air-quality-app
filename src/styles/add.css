@@ -13,6 +13,7 @@ form {
 form button {
   width: 20%;
   height: 45px;
+  border: none;
 }
 
 .card-loc {
@@ -30,15 +31,45 @@ form button {
   padding: 1% 6%;
 }
 
-.spinner {
+.spinner-grow {
   color: #f3ecf8;
   position: absolute;
   top: 40%;
   left: 40%;
-}
-
-.spinner-border,
-.spinner-grow {
   width: 50px;
   height: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    margin-top: 5%;
+  }
+
+  #search-city {
+    width: 40%;
+  }
+
+  form button {
+    width: 10%;
+  }
+
+  .card-loc-container {
+    margin-top: 2%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .card-loc {
+    margin-top: 2%;
+    width: 90%;
+    justify-self: center;
+  }
+
+  .spinner-grow {
+    left: 50%;
+    width: 60px;
+    height: 60px;
+  }
 }

@@ -38,7 +38,7 @@ const Add = () => {
       {
         cityOptions.length > 0 && (
           <div>
-            <ul>
+            <ul className="card-loc-container">
               {cityOptions.map((e) => (
                 <Locations key={uuidV4()} info={e} action="add" />
               ))}
