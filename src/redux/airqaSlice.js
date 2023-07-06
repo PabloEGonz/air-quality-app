@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { APIURL } from '../api/url';
+import { APIURL, getCoord } from '../api/url';
 
 const citiesData = [{
   name: 'Paris',
@@ -47,9 +47,11 @@ const citiesData = [{
 ];
 const initialState = {
   airdata: [],
+  cityOptions: [],
   cities: citiesData,
   isLoading: false,
   error: undefined,
+  citOptIsLoad: false,
 };
 
 export const getData = createAsyncThunk('airqa/getData', async (array) => {
@@ -76,9 +78,31 @@ export const getData = createAsyncThunk('airqa/getData', async (array) => {
   return Promise.all(promises);
 });
 
+export const getCityCoord = createAsyncThunk('airqa/getCityCoord', async (city) => {
+  try {
+    const response = await getCoord(city);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const res = await response.json();
+    return res;
+  } catch (error) {
+    return error;
+  }
+});
+
 const airqaSlice = createSlice({
   name: 'airqa',
   initialState,
+  reducers: {
+    addCity: (state, { payload }) => {
+      state.cities.push(payload);
+      state.cityOptions = [];
+    },
+    removeCity: (state, { payload }) => {
+      state.cities = state.cities.filter((city) => city.name !== payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getData.pending, (state) => {
@@ -90,8 +114,18 @@ const airqaSlice = createSlice({
       })
       .addCase(getData.rejected, (state) => {
         state.error = true;
+      })
+      .addCase(getCityCoord.pending, (state) => {
+        state.citOptIsLoad = true;
+      })
+      .addCase(getCityCoord.fulfilled, (state, { payload }) => {
+        state.citOptIsLoad = false;
+        state.cityOptions = payload;
+      })
+      .addCase(getCityCoord.rejected, (state) => {
+        state.error = true;
       });
   },
 });
-
+export const { addCity, removeCity } = airqaSlice.actions;
 export default airqaSlice.reducer;

@@ -4,25 +4,25 @@ import Map from './map';
 import Quality from './quality';
 
 const CardDetails = ({ data }) => (
-  <li className="details row">
+  <li className="details">
     <Map className="" lati={data.lat} lon={data.lon} />
     <div className="details-body d-flex flex-column">
       <h5 className="">{`${data.name},  ${data.state}, ${data.country}`}</h5>
       <Quality className="card-text card-footer" number={data.aqi} />
       <span>
-        Carbon Monoxide:
+        Carbon Monoxide: &nbsp;
         {` ${data.comp.co}`}
       </span>
       <span>
-        Nitrogen Monoxidee:
+        Nitrogen Monoxidee: &nbsp;
         {` ${data.comp.no}`}
       </span>
       <span>
-        Nitrogen Dioxide:
+        Nitrogen Dioxide: &nbsp;
         {` ${data.comp.no2}`}
       </span>
       <span>
-        Ozone:
+        Ozone: &nbsp;
         {` ${data.comp.o3}`}
       </span>
     </div>
@@ -35,7 +35,7 @@ CardDetails.propTypes = {
     country: PropTypes.string.isRequired,
     lat: PropTypes.number.isRequired,
     lon: PropTypes.number.isRequired,
-    state: PropTypes.string.isRequired,
+    state: PropTypes.string,
     name: PropTypes.string.isRequired,
     comp: PropTypes.shape({
       co: PropTypes.number.isRequired,

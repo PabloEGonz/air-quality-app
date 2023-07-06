@@ -1,19 +1,31 @@
 .filtered {
   margin-top: 10%;
   text-align: center;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 #form-filter {
-  width: 50%;
-  height: 40px;
-  text-indent: 5px;
-  border-radius: 10px;
-  font-size: 1rem;
+  width: 65%;
+  height: 45px;
+  text-indent: 15px;
+  outline: var(--accent);
+  border-radius: 0;
 }
 
 form button {
+  height: 44px;
   width: 30%;
-  font-size: 1.1rem;
+  border: none;
+  color: var(--text);
+  background-color: var(--accent);
 }
 
 @media only screen and (min-width: 768px) {
