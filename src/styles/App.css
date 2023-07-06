@@ -102,17 +102,18 @@ ul {
 }
 
 .card-container-details {
-  padding: 0;
-  width: 100% !important;
+  padding: 1%;
 }
 
 .details {
   margin-top: 10% !important;
   padding: 3%;
+  display: flex;
+  flex-direction: row;
 }
 
 .details-body {
-  padding: 0;
+  padding: 2% !important;
   color: rgb(251, 243, 243) !important;
 }
 
@@ -163,13 +164,28 @@ ul {
     padding: 2%;
   }
 
+  .card-map {
+    margin: 2% 0 0 0;
+    width: fit-content;
+    justify-self: center;
+  }
+
+  .card-container-details {
+    padding: 2%;
+  }
+
   .details {
-    margin-top: 1% !important;
-    padding: 0 3%;
+    margin-top: 15% !important;
+    padding: 0 !important;
   }
 
   .details-body span {
     margin-top: 1%;
+  }
+
+  .details-body p,
+  .details-body span {
+    font-size: 0.9rem;
   }
 
   .about {
