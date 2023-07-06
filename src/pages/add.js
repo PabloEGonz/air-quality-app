@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 import { getCityCoord } from '../redux/airqaSlice';
 import Locations from '../components/locations';
+import Spiner from '../components/spiner';
 
 const Add = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
-  const { cityOptions } = useSelector((state) => state.airqa);
+  const { cityOptions, citOptIsLoad } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
     setCity(e.target.value);
   };
@@ -33,6 +34,7 @@ const Add = () => {
           <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
       </div>
+      {citOptIsLoad && (<Spiner />)}
       {
         cityOptions.length > 0 && (
           <div>

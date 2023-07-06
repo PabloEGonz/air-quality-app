@@ -35,7 +35,7 @@ CardDetails.propTypes = {
     country: PropTypes.string.isRequired,
     lat: PropTypes.number.isRequired,
     lon: PropTypes.number.isRequired,
-    state: PropTypes.string.isRequired,
+    state: PropTypes.string,
     name: PropTypes.string.isRequired,
     comp: PropTypes.shape({
       co: PropTypes.number.isRequired,
