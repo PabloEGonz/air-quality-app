@@ -14,7 +14,7 @@ const Locations = ({ info, action }) => {
     <li className="card card-loc">
       <div className="card-body">
         <h2>
-          {`${info.name},  ${info.state}, ${info.country}` }
+          {info.state ? `${info.name},  ${info.state}, ${info.country}` : `${info.name}, ${info.country}`}
         </h2>
         <ReactCountryFlag
           className="flag"
