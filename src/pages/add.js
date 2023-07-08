@@ -27,7 +27,7 @@ const Add = () => {
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <div>
-        <form action="POST">
+        <form action="POST" className="d-flex flex-row justify-content-center">
           <input id="search-city" type="text" value={city} onChange={handleChange} placeholder="Type the city name" />
           <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
