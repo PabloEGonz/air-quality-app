@@ -28,10 +28,10 @@ const Filtered = () => {
     <>
       <div className="filtered">
         <form action="POST">
-          <select name="filter" id="form-filter" onChange={handleCatChng}>
+          <select name="filter" defaultValue="all" id="form-filter" onChange={handleCatChng}>
             <option value="worst">Worst</option>
             <option value="best">Best</option>
-            <option value="all" selected>All</option>
+            <option value="all">All</option>
           </select>
         </form>
       </div>
