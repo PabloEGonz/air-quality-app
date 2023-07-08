@@ -5,27 +5,13 @@
   width: 100%;
 }
 
-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
 #form-filter {
   width: 65%;
   height: 45px;
-  text-indent: 15px;
+  font-size: 1.2rem;
   outline: var(--accent);
   border-radius: 0;
-}
-
-form button {
-  height: 44px;
-  width: 30%;
-  border: none;
-  color: var(--text);
-  background-color: var(--accent);
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -36,12 +22,5 @@ form button {
   #form-filter {
     width: 30%;
     font-size: 1.1rem;
-    text-align: center;
-  }
-
-  form button {
-    width: 10%;
-    font-size: 1.2rem;
-    font-weight: 600;
   }
 }
