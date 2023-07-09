@@ -39,7 +39,7 @@ form button {
   color: #f3ecf8;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 43%;
   width: 50px;
   height: 50px;
 }
@@ -64,6 +64,14 @@ form button {
     opacity: 0;
     top: 15%;
   }
+}
+
+.access {
+  font-size: 1rem;
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 1% 2%;
+  margin-top: 10%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -94,8 +102,11 @@ form button {
   }
 
   .spinner-grow {
-    left: 50%;
+    left: 47%;
     width: 60px;
     height: 60px;
+  }
+  .access {
+    margin-top: 5%;
   }
 }

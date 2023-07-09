@@ -10,6 +10,7 @@ import Spiner from '../components/spiner';
 
 const Add = () => {
   const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const [city, setCity] = useState('');
   const { cityOptions, citOptIsLoad, addMessage } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
@@ -52,6 +53,7 @@ const Add = () => {
       {addMessage && (
         <div className="add-mesg">{addMessage}</div>
       )}
+      <Link to="/cities" style={{ textDecoration: 'none' }} className="d-flex justify-content-center"><button type="button" className="access">See Cities</button></Link>
     </>
   );
 };
