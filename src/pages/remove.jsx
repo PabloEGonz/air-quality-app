@@ -18,8 +18,8 @@ const Remove = () => {
       </nav>
       <div>
         <ul className="card-loc-container">
-          {cities.map((e) => (
-            <Locations key={uuidV4()} info={e} action="delete" />
+          {cities.map((el) => (
+            <Locations key={uuidV4()} info={el} action="delete" />
           ))}
         </ul>
       </div>
