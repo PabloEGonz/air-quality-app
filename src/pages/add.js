@@ -29,7 +29,7 @@ const Add = () => {
   return (
     <div className="add">
       <nav className="navbar">
-        <BsFillArrowLeftSquareFill className="option" onClick={() => navigate(-1)} />
+        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <div>

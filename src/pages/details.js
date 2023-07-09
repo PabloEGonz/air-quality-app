@@ -13,7 +13,7 @@ const Details = () => {
   return (
     <>
       <nav className="navbar">
-        <BsFillArrowLeftSquareFill className="option" onClick={() => navigate(-1)} />
+        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <ul className="card-container-details">

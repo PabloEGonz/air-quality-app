@@ -3,12 +3,11 @@ import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {
-  const prev = useNavigate();
-
+  const navigate = useNavigate();
   return (
     <>
       <nav className="navbar">
-        <BsFillArrowLeftSquareFill className="option" onClick={() => prev(-1)} />
+        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <div className="about">
