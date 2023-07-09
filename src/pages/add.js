@@ -2,7 +2,7 @@ import '../styles/add.css';
 import React, { useState, useEffect } from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 import { getCityCoord, clearMesg } from '../redux/airqaSlice';
 import Locations from '../components/locations';
@@ -10,7 +10,7 @@ import Spiner from '../components/spiner';
 
 const Add = () => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [city, setCity] = useState('');
   const { cityOptions, citOptIsLoad, addMessage } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
@@ -27,9 +27,9 @@ const Add = () => {
     }, 4000);
   }, [addMessage, dispatch]);
   return (
-    <>
+    <div className="add">
       <nav className="navbar">
-        <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
+        <BsFillArrowLeftSquareFill className="option" onClick={() => navigate(-1)} />
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <div>
@@ -53,8 +53,8 @@ const Add = () => {
       {addMessage && (
         <div className="add-mesg">{addMessage}</div>
       )}
-      <Link to="/cities" style={{ textDecoration: 'none' }} className="d-flex justify-content-center"><button type="button" className="access">See Cities</button></Link>
-    </>
+      <Link to="/cities" style={{ textDecoration: 'none' }}><button type="button" className="access">See Cities</button></Link>
+    </div>
   );
 };
 

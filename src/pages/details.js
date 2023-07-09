@@ -1,18 +1,19 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 import CardDetails from '../components/cardDetls';
 
 const Details = () => {
+  const navigate = useNavigate();
   const { airdata } = useSelector((state) => state.airqa);
   const { city } = useParams();
   const selected = airdata.filter((ele) => ele.name === city);
   return (
     <>
       <nav className="navbar">
-        <Link className="return" to="/cities"><BsFillArrowLeftSquareFill className="option" /></Link>
+        <BsFillArrowLeftSquareFill className="option" onClick={() => navigate(-1)} />
         <h3 className="brand">Air Quality App</h3>
       </nav>
       <ul className="card-container-details">
