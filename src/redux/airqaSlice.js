@@ -98,11 +98,14 @@ const airqaSlice = createSlice({
   reducers: {
     addCity: (state, { payload }) => {
       state.cities.push(payload);
-      state.addMessage = 'The city was added!';
+      state.addMessage = 'City successfully added!';
       state.cityOptions = [];
     },
     removeCity: (state, { payload }) => {
       state.cities = state.cities.filter((city) => city.name !== payload);
+    },
+    clearMesg: (state) => {
+      state.addMessage = undefined;
     },
   },
   extraReducers: (builder) => {
@@ -124,7 +127,8 @@ const airqaSlice = createSlice({
         state.citOptIsLoad = false;
         if (payload.length > 0) state.cityOptions = payload;
         else {
-          state.addMessage = 'Could not find cities, try with other name';
+          state.addMessage = 'No cities found. Please try a different name.';
+          state.cityOptions = [];
         }
       })
       .addCase(getCityCoord.rejected, (state) => {
@@ -132,5 +136,5 @@ const airqaSlice = createSlice({
       });
   },
 });
-export const { addCity, removeCity } = airqaSlice.actions;
+export const { addCity, removeCity, clearMesg } = airqaSlice.actions;
 export default airqaSlice.reducer;

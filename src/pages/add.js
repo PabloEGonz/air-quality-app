@@ -1,10 +1,10 @@
 import '../styles/add.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
-import { getCityCoord } from '../redux/airqaSlice';
+import { getCityCoord, clearMesg } from '../redux/airqaSlice';
 import Locations from '../components/locations';
 import Spiner from '../components/spiner';
 
@@ -20,6 +20,11 @@ const Add = () => {
     dispatch(getCityCoord(city));
     setCity('');
   };
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(clearMesg());
+    }, 4000);
+  }, [addMessage, dispatch]);
   return (
     <>
       <nav className="navbar">
@@ -44,7 +49,9 @@ const Add = () => {
           </div>
         )
       }
-      <div className="add-mesg">{addMessage}</div>
+      {addMessage && (
+        <div className="add-mesg">{addMessage}</div>
+      )}
     </>
   );
 };

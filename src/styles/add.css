@@ -45,10 +45,14 @@ form button {
 }
 
 .add-mesg {
+  font-size: 1.1rem;
+  color: var(--text);
   animation: message 6s;
   position: absolute;
-  top: 70%;
-  left: 40%;
+  top: 40%;
+  left: 2%;
+  width: 100%;
+  text-align: center;
 }
 
 @keyframes message {
@@ -58,7 +62,7 @@ form button {
 
   100% {
     opacity: 0;
-    top: 50%;
+    top: 15%;
   }
 }
 
