@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import Filtered from '../components/filtered';
 import { getData } from '../redux/airqaSlice';
 
 const Home = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { cities } = useSelector((state) => state.airqa);
   useEffect(() => {
@@ -14,8 +15,8 @@ const Home = () => {
   return (
     <>
       <nav className="navbar">
-        <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
-        <h3 className="brand">Air Quality App</h3>
+        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <div>
         <Filtered />

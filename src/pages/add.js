@@ -1,17 +1,18 @@
 import '../styles/add.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
-import { getCityCoord } from '../redux/airqaSlice';
+import { getCityCoord, clearMesg } from '../redux/airqaSlice';
 import Locations from '../components/locations';
 import Spiner from '../components/spiner';
 
 const Add = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [city, setCity] = useState('');
-  const { cityOptions, citOptIsLoad } = useSelector((state) => state.airqa);
+  const { cityOptions, citOptIsLoad, addMessage } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
     setCity(e.target.value);
   };
@@ -20,14 +21,19 @@ const Add = () => {
     dispatch(getCityCoord(city));
     setCity('');
   };
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(clearMesg());
+    }, 4000);
+  }, [addMessage, dispatch]);
   return (
-    <>
+    <div className="add">
       <nav className="navbar">
-        <Link className="return" to="/"><BsFillArrowLeftSquareFill className="option" /></Link>
-        <h3 className="brand">Air Quality App</h3>
+        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <div>
-        <form action="POST">
+        <form action="POST" className="d-flex flex-row justify-content-center">
           <input id="search-city" type="text" value={city} onChange={handleChange} placeholder="Type the city name" />
           <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
@@ -44,7 +50,11 @@ const Add = () => {
           </div>
         )
       }
-    </>
+      {addMessage && (
+        <div className="add-mesg">{addMessage}</div>
+      )}
+      <Link to="/cities" style={{ textDecoration: 'none' }}><button type="button" className="access">See Cities</button></Link>
+    </div>
   );
 };
 
