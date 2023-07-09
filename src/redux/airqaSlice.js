@@ -52,6 +52,7 @@ const initialState = {
   isLoading: false,
   error: undefined,
   citOptIsLoad: false,
+  addMessage: undefined,
 };
 
 export const getData = createAsyncThunk('airqa/getData', async (array) => {
@@ -97,6 +98,7 @@ const airqaSlice = createSlice({
   reducers: {
     addCity: (state, { payload }) => {
       state.cities.push(payload);
+      state.addMessage = 'The city was added!';
       state.cityOptions = [];
     },
     removeCity: (state, { payload }) => {
@@ -120,7 +122,10 @@ const airqaSlice = createSlice({
       })
       .addCase(getCityCoord.fulfilled, (state, { payload }) => {
         state.citOptIsLoad = false;
-        state.cityOptions = payload;
+        if (payload.length > 0) state.cityOptions = payload;
+        else {
+          state.addMessage = 'Could not find cities, try with other name';
+        }
       })
       .addCase(getCityCoord.rejected, (state) => {
         state.error = true;

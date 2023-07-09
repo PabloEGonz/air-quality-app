@@ -11,7 +11,7 @@ import Spiner from '../components/spiner';
 const Add = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
-  const { cityOptions, citOptIsLoad } = useSelector((state) => state.airqa);
+  const { cityOptions, citOptIsLoad, addMessage } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
     setCity(e.target.value);
   };
@@ -44,6 +44,7 @@ const Add = () => {
           </div>
         )
       }
+      <div className="add-mesg">{addMessage}</div>
     </>
   );
 };

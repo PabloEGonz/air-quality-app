@@ -44,6 +44,24 @@ form button {
   height: 50px;
 }
 
+.add-mesg {
+  animation: message 6s;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+}
+
+@keyframes message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   form {
     margin-top: 5%;
