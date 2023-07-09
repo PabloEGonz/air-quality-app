@@ -79,6 +79,11 @@ ul {
   color: var(--text);
 }
 
+.lead {
+  color: var(--text);
+  margin: 2% 10%;
+}
+
 .card-container {
   margin-top: 5%;
   display: grid;
