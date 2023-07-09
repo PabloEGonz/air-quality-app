@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const About = () => {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ const About = () => {
     <>
       <nav className="navbar">
         <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
-        <h3 className="brand">Air Quality App</h3>
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <div className="about">
         <table className="table">

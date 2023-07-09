@@ -30,7 +30,7 @@ const Add = () => {
     <div className="add">
       <nav className="navbar">
         <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
-        <h3 className="brand">Air Quality App</h3>
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <div>
         <form action="POST" className="d-flex flex-row justify-content-center">

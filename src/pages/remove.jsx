@@ -14,7 +14,7 @@ const Remove = () => {
     <div className="remove">
       <nav className="navbar">
         <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
-        <h3 className="brand">Air Quality App</h3>
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <div>
         <Link to="/cities" style={{ textDecoration: 'none' }}><button type="button" className="access">See Cities</button></Link>

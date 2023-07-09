@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 import CardDetails from '../components/cardDetls';
 
@@ -14,7 +14,7 @@ const Details = () => {
     <>
       <nav className="navbar">
         <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
-        <h3 className="brand">Air Quality App</h3>
+        <Link className="brand" to="/">Air Quality App</Link>
       </nav>
       <ul className="card-container-details">
         {selected.map((ele) => (
