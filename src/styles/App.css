@@ -49,7 +49,7 @@ ul {
 }
 
 .options {
-  margin-top: 10%;
+  margin-top: 2%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -80,8 +80,9 @@ ul {
 }
 
 .lead {
+  text-align: center;
   color: var(--text);
-  margin: 2% 10%;
+  margin: 3% 10% 0;
 }
 
 .card-container {
