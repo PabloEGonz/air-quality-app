@@ -1,4 +1,5 @@
-.add {
+.add,
+.remove {
   text-align: center;
 }
 
@@ -18,6 +19,10 @@ form button {
   width: 20%;
   height: 45px;
   border: none;
+}
+
+.card-loc-container {
+  padding-bottom: 5%;
 }
 
 .card-loc {
@@ -92,7 +97,6 @@ form button {
   }
 
   .card-loc-container {
-    margin-top: 2%;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
