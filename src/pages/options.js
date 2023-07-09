@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaMapMarked } from 'react-icons/fa';
 import { MdLibraryAdd } from 'react-icons/md';
-import { TbListDetails } from 'react-icons/tb';
+import { IoMdRemoveCircle } from 'react-icons/io';
 import { BsPatchQuestionFill } from 'react-icons/bs';
 import { RiAccountCircleFill } from 'react-icons/ri';
 import Balancer from 'react-wrap-balancer';
@@ -31,7 +31,7 @@ const Options = () => (
         Add a City
       </Link>
       <Link className="link" to="/remove">
-        <TbListDetails className="option" />
+        <IoMdRemoveCircle className="option" />
         Remove a City
       </Link>
       <Link className="link" to="/about">
