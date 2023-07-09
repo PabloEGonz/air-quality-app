@@ -31,15 +31,24 @@
 
 # 📖 Air Quality App <a name="about-project"></a>
 
-This a webapp that display the air quality of cities and their respective map.
+This web app allows you to easily monitor the air quality of different cities. It consists of four sections:
+
+Cities Air Quality: In this section, you can view the air quality information for each city. By clicking or selecting a city name, you can access detailed air quality data for that specific location.
+
+Add City: Use this section to add cities to the default list of available cities. Simply enter the name of the city using the provided form. The app will give you a list of cities with that name and you will be able to select the one you want to add.
+
+Remove City: In this section a list of currently displayed cities will be shown, and you can select the cities you want to remove and the selected cities will be removed from the display.
+
+About: This section provides detailed information about the parameters used to determine air quality. You can learn about the scales and indices used to measure air quality levels.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 1- React.
+2- Bootstrap.
 
 ### Tech Stack <a name="tech-stack"></a>
 
-- React .
+- React, Bootstrap.
 
 <details>
   <summary>Client</summary>
