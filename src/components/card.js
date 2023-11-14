@@ -7,7 +7,7 @@ import Quality from './quality';
 const Card = ({ data }) => {
   const navigate = useNavigate();
   return (
-    <li className="card card-map">
+    <li className="card card-map overflow-hidden">
       <Map lati={data.lat} lon={data.lon} />
       <div className="card-img-overlay">
         <button type="button" className="trigger" onClick={() => navigate(`/details/${data.name}`, { replace: true })}><h5 className="card-title">{data.state ? `${data.name},  ${data.state}, ${data.country}` : `${data.name}, ${data.country}`}</h5></button>
