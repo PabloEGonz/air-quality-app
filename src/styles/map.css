@@ -10,9 +10,10 @@
 }
 
 .details .map-wrap {
-  position: relative;
-  width: 50%;
+  width: 90%;
   height: 210px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .details .map {
@@ -21,5 +22,16 @@
 }
 
 .details-body {
-  width: 50%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .details .map-wrap {
+    width: 60%;
+    height: 310px;
+  }
+
+  .details-body {
+    width: 40%;
+  }
 }

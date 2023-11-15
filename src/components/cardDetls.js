@@ -5,7 +5,7 @@ import Quality from './quality';
 
 const CardDetails = ({ data }) => (
   <li className="details">
-    <Map className="" lati={data.lat} lon={data.lon} />
+    <Map lati={data.lat} lon={data.lon} />
     <div className="details-body d-flex flex-column">
       <h5 className="">{`${data.name},  ${data.state}, ${data.country}`}</h5>
       <Quality className="card-text card-footer" number={data.aqi} />

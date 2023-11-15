@@ -127,7 +127,8 @@ ul {
   margin-top: 10% !important;
   padding: 3%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
 .details-body {
@@ -194,6 +195,7 @@ ul {
   }
 
   .details {
+    flex-direction: row;
     margin-top: 15% !important;
     padding: 0 !important;
   }
