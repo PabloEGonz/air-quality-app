@@ -1,16 +1,15 @@
 import '../styles/add.css';
 import React, { useState, useEffect } from 'react';
-import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { v4 as uuidV4 } from 'uuid';
 import { getCityCoord, clearMesg } from '../redux/airqaSlice';
 import Locations from '../components/locations';
 import Spiner from '../components/spiner';
+import NavBar from '../components/NavBar';
 
 const Add = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [city, setCity] = useState('');
   const { cityOptions, citOptIsLoad, addMessage } = useSelector((state) => state.airqa);
   const handleChange = (e) => {
@@ -28,10 +27,7 @@ const Add = () => {
   }, [addMessage, dispatch]);
   return (
     <div className="add">
-      <nav className="navbar">
-        <BsFillArrowLeftSquareFill className="return" onClick={() => navigate(-1)} />
-        <Link className="brand" to="/">Air Quality App</Link>
-      </nav>
+      <NavBar />
       <div>
         <form action="POST" className="d-flex flex-row justify-content-center">
           <input id="search-city" type="text" value={city} onChange={handleChange} placeholder="Type the city name" />
