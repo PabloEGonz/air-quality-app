@@ -4,13 +4,12 @@ import { FaMapMarked } from 'react-icons/fa';
 import { MdLibraryAdd } from 'react-icons/md';
 import { IoMdRemoveCircle } from 'react-icons/io';
 import { BsPatchQuestionFill } from 'react-icons/bs';
-import { RiAccountCircleFill } from 'react-icons/ri';
 import Balancer from 'react-wrap-balancer';
 
 const Options = () => (
   <>
     <nav className="navbar">
-      <Link to="/"><RiAccountCircleFill className="account" /></Link>
+      <img src={`${process.env.PUBLIC_URL}/airIcon.png`} alt="logo" className="logo" />
       <h3 className="brand">Air Quality App</h3>
     </nav>
     <p className="lead">

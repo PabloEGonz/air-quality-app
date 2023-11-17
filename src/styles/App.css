@@ -22,17 +22,16 @@ ul {
 .navbar {
   background-color: var(--primary);
   height: 30%;
-  padding: 3% 5% !important;
+  padding: 2% 5% !important;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.account {
-  width: 50px;
-  height: 50px;
-  color: #fff;
+.logo {
+  width: 45px;
+  height: 45px;
 }
 
 .brand {
