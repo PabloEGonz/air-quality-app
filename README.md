@@ -13,7 +13,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [📹 Video Walkthrough](#walkthrough)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -66,14 +65,6 @@ About: This section provides detailed information about the parameters used to d
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 You can see the website [here!](https://air-quality-app-r9g3.onrender.com/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📹 Video Walkthrough <a name="walkthrough"></a>
-
-> You can find the video walkthrough at:
-
-- https://www.loom.com/share/c5debb314ffc49be8e1d36e4ffb1555c?sid=272ce8ea-818d-49ac-bc36-99de72cdcfd8
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
